@@ -11,7 +11,8 @@
 |
 */
 
-
 Route::get('/', 'FrontController@index')->name('home');
 Route::get('/login', 'LoginController@index')->name('login');
+Route::post('authenticate', 'LoginController@authenticate')->name('authenticate');
 
+Route::get('dashboard', 'DashboardController@index');

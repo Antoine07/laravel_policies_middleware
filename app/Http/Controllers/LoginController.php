@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -19,5 +20,7 @@ class LoginController extends Controller
             // Authentication passed...
             return redirect()->intended('dashboard');
         }
+
+        dump(Auth::attempt($credentials));
     }
 }
