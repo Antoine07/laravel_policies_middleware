@@ -21,6 +21,6 @@ class LoginController extends Controller
             return redirect()->intended('dashboard');
         }
 
-        dump(Auth::attempt($credentials));
+       //  dump(Auth::attempt($credentials));
     }
 }
